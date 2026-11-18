@@ -1,0 +1,37 @@
+@use "../media" as *;
+
+.translator-button {
+   padding: 4px;
+   background-color: var(--color-gray-alt);
+   width: 104px;
+   aspect-ratio: 2;
+   display: flex;
+   align-items: center;
+   border-radius: var(--border-radius);
+
+   @include mobile {
+      padding: 3px;
+      width: 52px;
+   }
+
+   &__button {
+      color: var(--color-dark-gray);
+      background-color: transparent;
+      width: 48px;
+      height: 44px;
+      border: none;
+      border-radius: var(--border-radius);
+      @include fluid-text(14, 6);
+      font-weight: 500;
+
+      @include mobile {
+           width: 24px;
+      height: 22px;
+   }
+
+      &_actively {
+         color: var(--color-dark);
+         background-color: var(--color-light);
+      }
+   }
+}

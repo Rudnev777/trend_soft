@@ -1,0 +1,9 @@
+@use "media" as *;
+.title {
+    font-weight: 700;
+    @include fluid-text(40,12);
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+
+}

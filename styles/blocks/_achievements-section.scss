@@ -1,0 +1,119 @@
+@use "../media" as *;
+
+.achievements-section {
+    background-color: var(--color-light);
+    padding-top: 100px;
+    padding-bottom: 300px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+
+    @include tablet {
+        padding-top: 60px;
+        row-gap: 20px;
+        padding-bottom: 225px;
+        
+        
+    }
+
+    @include mobile {
+        padding-top: 30px;
+        row-gap: 10px;
+        padding-bottom: 125px;
+    }
+        @include mobile-s {
+    
+        padding-bottom: 105px;
+    }
+
+    &__title {
+        max-width: 540px;
+        text-transform: uppercase;
+        @include fluid-text(40, 12);
+        font-weight: 700;
+        text-align: center;
+
+        @include tablet {
+            max-width: 340px;
+        }
+         @include mobile {
+            max-width: 260px;
+    }
+
+        &_decoration {
+            color: var(--color-red);
+        }
+    }
+
+    &__desc {
+        max-width: 540px;
+        @include fluid-text(16, 6);
+        font-weight: 300;
+        text-align: center;
+        line-height: 150%;
+
+        @include tablet {
+            max-width: 340px;
+        }
+
+    @include mobile {
+            max-width: 240px;
+    }
+
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 20px;
+
+      
+
+    @include mobile {
+        row-gap: 10px;
+    }
+    }
+
+    &__item {
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+           @include tablet {
+            padding: 30px 40px;
+    }
+
+    @include mobile {
+            padding: 15px 20px;
+    }
+
+    }
+
+    &__image{
+        max-width: 100px;
+        width: 11vw;
+    }
+
+    &__number {
+        padding-top: 20px;
+        color: var(--color-red);
+        @include fluid-text(40, 12);
+        font-weight: 700;
+        text-wrap: nowrap;
+         @include mobile {
+            padding-top: 10px;
+    }
+
+
+    }
+
+    &__label {
+        @include fluid-text(26, 8);
+        text-wrap: nowrap;
+        font-weight: 300;
+    }
+}

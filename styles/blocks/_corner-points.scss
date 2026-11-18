@@ -1,0 +1,46 @@
+@use "../media" as *;
+.corner-points {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    width: 170px;
+    aspect-ratio: 1;
+
+
+      @include tablet {
+        width: 130px;
+    }
+
+    @include mobile{
+            width: 100px;
+    }
+     @include mobile-s{
+            width: 64px;
+    }
+
+    &__point {
+        width: 5px;
+        aspect-ratio: 1;
+        background-color: var(--color-red);
+        border-radius: 50%;
+
+        &_white{
+        background-color: var(--color-light);
+    }
+
+         @include tablet {
+            width: 4px;
+        }
+            @include mobile{
+            width: 3px;
+    }
+         @include mobile-s{
+            width: 2px;
+    }
+    }
+
+    &__no-visible {
+        grid-row: 3/13;
+        grid-column: 3/13;
+    }
+}

@@ -1,0 +1,163 @@
+@use "../media" as *;
+
+.container {
+    padding: 50px 90px;
+    display: flex;
+    column-gap: 60px;
+    position: relative;
+    
+    background-color: var(--color-light);
+    max-width: 1164px;
+
+    margin-inline: auto;
+    margin-bottom: 100px;
+    border: 2px solid var(--color-gray);
+
+    @include tablet {
+        padding: 30px 40px;
+        column-gap: 40px;
+        margin-bottom: 75px;
+    }
+
+    @include mobile {
+        padding: 15px 25px;
+        column-gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    &_top {
+        margin-top: -250px;
+
+        @include tablet {
+            margin-top: -200px;
+        }
+
+        @include mobile {
+            margin-top: -100px;
+        }
+    }
+
+    &_reverse {
+        flex-direction: row-reverse;
+
+    }
+
+    &__image {
+        width: 60%;
+        box-sizing: 0px 2px 25px 0px var(--color-gray-shadow);
+
+        &_solo{
+                    width: 90%;
+        }
+
+        @include mobile-s {
+            width: 50%;
+        }
+
+    }
+
+    &__body {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        row-gap: 30px;
+
+        @include tablet {
+            row-gap: 20px;
+        }
+
+        @include mobile {
+            row-gap: 15px;
+        }
+
+        @include mobile-s {
+            row-gap: 10px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        @include fluid-text(24, 10);
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        font-weight: 300;
+        @include fluid-text(16, 6);
+    }
+
+    &__button {
+        padding: 9px 28px;
+        background-color: var(--color-red);
+        color: var(--color-light);
+        border: none;
+        font-weight: 700;
+        @include fluid-text(14, 6);
+
+        @include tablet {
+            padding: 7px 24px;
+        }
+
+        @include mobile {
+            padding: 5px 20px;
+        }
+    }
+
+    &__corner-left-botton {
+        position: absolute;
+        transform: rotate(270deg);
+        z-index: 10;
+        top: 71%;
+        left: -2%;
+
+        @include tablet {
+            left: -5%;
+        }
+
+        @media (max-width: 610px) {
+            left: -3%;
+            top: 67%;
+        }
+    }
+
+    &__corner-right-botton {
+        position: absolute;
+        transform: rotate(180deg);
+        z-index: 10;
+        top: 71%;
+        right: -2%;
+
+        @include tablet {
+            right: -3%;
+        }
+
+        @media (max-width: 610px) {
+            top: 67%;
+        }
+    }
+
+     &__corner-right-top {
+        position: absolute;
+        transform: rotate(90deg);
+        z-index: 10;
+        top: -5%;
+        right: -2%;
+
+        @include tablet {
+            right: -3%;
+            top: -5%;
+        }
+        @include mobile{
+                    top:-7%;
+        }
+
+        @media (max-width: 610px) {
+            top: -10%;
+        }
+
+
+    }
+
+}

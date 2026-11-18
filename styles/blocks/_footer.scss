@@ -1,0 +1,36 @@
+@use "../media" as *;
+
+.footer {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+
+    @include tablet {
+        row-gap: 40px;
+        padding-bottom: 40px;
+    }
+
+
+    @include mobile {
+        row-gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    &__info {
+        max-width: 1164px;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__inner {
+        color: var(--color-dark-gray-alt);
+        font-weight: 400;
+        @include fluid-text(20, 5);
+        line-height: 150%;
+        text-align: center;
+
+    }
+}

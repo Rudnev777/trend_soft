@@ -1,0 +1,43 @@
+@use "../media" as *;
+
+.square-points {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 168px;
+    aspect-ratio: 1;
+
+    @include tablet {
+        width: 130px;
+    }
+
+    @include mobile{
+            width: 100px;
+    }
+     @include mobile-s{
+            width: 64px;
+    }
+
+    &__point {
+        
+        width: 5px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+
+        @include tablet {
+            width: 4px;
+        }
+            @include mobile{
+            width: 3px;
+    }
+         @include mobile-s{
+            width: 2px;
+    }
+
+    &_white{
+        background-color: var(--color-light);
+    }
+    &_red{
+        background-color: var(--color-light);
+    }
+    }
+}

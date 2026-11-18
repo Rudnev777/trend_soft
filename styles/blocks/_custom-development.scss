@@ -1,0 +1,92 @@
+@use "../media" as *;
+
+.custom-development {
+    margin-block: 150px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 1164px;
+    width: 100vw;
+
+    @include tablet {
+        margin-block: 100px;
+    }
+
+
+    @include mobile {
+        margin-block: 75px;
+    }
+
+    @include mobile-s {
+        margin-block: 50px;
+    }
+
+    &__info {
+        padding-inline: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-gray-alt);
+
+        @include tablet {
+            padding-inline: 25px;
+        }
+
+
+        @include mobile {
+            padding-inline: 15px;
+        }
+
+        @include mobile-s {
+            padding-inline: 10px;
+        }
+    }
+
+    &__title {
+        @include fluid-text(40, 14);
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+
+    &__desc {
+        padding-top: 20px;
+        padding-bottom: 44px;
+        @include fluid-text(16, 6);
+        font-weight: 300;
+        text-align: center;
+
+        @include tablet {
+            padding-top: 15px;
+            padding-bottom: 35px;
+        }
+
+
+        @include mobile {
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+
+
+    }
+
+    &__button {
+        padding: 9px 28px;
+        background-color: var(--color-red);
+        color: var(--color-light);
+        border: none;
+        font-weight: 700;
+        @include fluid-text(14, 6);
+
+        @include tablet {
+            padding: 7px 24px;
+        }
+
+        @include mobile {
+            padding: 5px 20px;
+        }
+    }
+}

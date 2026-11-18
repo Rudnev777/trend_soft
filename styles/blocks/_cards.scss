@@ -1,0 +1,70 @@
+@use "../media" as *;
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    position: relative;
+    padding: 37px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-gray-alt);
+
+    @include hover {
+        &::after {
+            position: absolute;
+            content: attr(data-desc);
+            display: flex;
+            padding-inline: 28px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-red);
+            color: var(--color-light);
+            z-index: 10;
+            text-align: center;
+            font-weight: 300;
+            @include fluid-text(16, 5);
+
+            @include tablet {
+                padding-inline: 20px;
+            }
+
+            @include mobile {
+                padding-inline: 10px;
+            }
+
+        }
+    }
+
+    @include tablet {
+        padding: 30px 55px;
+    }
+
+    @include mobile {
+        padding: 20px 30px;
+    }
+
+    @include mobile-s {
+        padding: 10px 25px;
+    }
+
+    &__image {
+        max-width: 100px;
+        width: 7vw;
+    }
+
+    &__title {
+
+        font-weight: 700;
+        @include fluid-text(24, 8);
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+}

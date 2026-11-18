@@ -1,0 +1,89 @@
+@use "../media" as *;
+
+.title-section {
+    padding-inline: 5px;
+    padding-block: 87px;
+    width: 100vw;
+    background-color: var(--color-red);
+    color: var(--color-light);
+    @include tablet{
+            padding-block: 60px;
+    }
+    @include mobile{
+            padding-block: 40px;
+    }
+     @include mobile-s{
+            padding-block: 20px;
+     }
+
+    &__wrap {
+        margin-inline: auto;
+        max-width: 1164px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 45% 55%;
+        column-gap: 40px;
+       
+    @include mobile{
+            column-gap: 30px;
+    }
+     @include mobile-s{
+             column-gap: 10px;
+     }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        row-gap: 30px;
+         @include mobile{
+            row-gap: 15px;
+    }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        @include fluid-text(50, 12);
+        text-wrap: nowrap;
+        font-weight: 700;
+    }
+
+    &__desc {
+        width: 75%;
+        @include fluid-text(16, 5);
+        font-weight: 400;
+        line-height: 150%;
+    }
+    
+
+    &__image-block{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+      
+    }
+    &__square-top{
+        position: absolute;
+        right: 8%;
+        top: 15%;
+        z-index: 10;
+    }
+
+     &__square-botton{
+        position: absolute;
+        left: 6%;
+        bottom: -4%;
+        z-index: 10;
+    }
+
+    &__image{
+        
+        z-index: 100;
+        width: 80%;
+        object-fit: contain;
+    }
+}

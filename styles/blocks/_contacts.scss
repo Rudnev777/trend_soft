@@ -1,0 +1,55 @@
+@use "../media" as *;
+
+.сontacts {
+    padding-block: 47px;
+    padding-left: 58px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-gray);
+
+    @include tablet {
+        padding-block: 35px;
+        padding-left: 45px;
+    }
+
+
+    @include mobile {
+        padding-block: 25px;
+        padding-left: 35px;
+    }
+
+    @include mobile-s {
+        padding-block: 15px;
+        padding-left: 25px;
+    }
+
+    &__title {
+        font-weight: 700;
+        @include fluid-text(34, 12);
+        text-transform: uppercase;
+    }
+
+    &__tel,
+    &__label {
+        @include fluid-text(20, 8);
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &__tel {
+        padding-top: 30px;
+        padding-bottom: 10px;
+
+        @include tablet {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+
+        @include mobile {
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+    }
+
+}
