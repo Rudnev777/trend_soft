@@ -1,25 +1,28 @@
 @use "../media" as *;
 
 .header {
-    background-color: var(--color-light);
-    margin-top: 32px;
-    max-width: 1164px;
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 168px;
 
-    @include tablet {
-        margin-top: 24px;
-        column-gap: 100px;
+
+    &__container {
+        padding-block: 32px;
+        max-width: var(--container-width);
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 168px;
+
+        @include tablet {
+            padding-block: 24px;
+            column-gap: 100px;
+        }
+
+        @include mobile {
+            padding-block: 12px;
+            column-gap: 35px;
+        }
+
     }
-
-    @include mobile {
-        margin-top: 12px;
-        column-gap: 35px;
-    }
-
 
 
     &__image {
@@ -49,7 +52,7 @@
 
     &__link {
         font-weight: 500;
-        @include fluid-text(14, 6);
+        @include fluid-text(16, 6);
         text-transform: uppercase;
         text-wrap: nowrap;
         transition: var(--transition-duraction);

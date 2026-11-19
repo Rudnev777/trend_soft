@@ -58,7 +58,7 @@
      display: flex;
      justify-content: space-between;
      column-gap: 100px;
-     max-width: 1164px;
+     max-width: var(--container-width);
      height: 200px;
      top: -230px;
      color: var(--color-light);

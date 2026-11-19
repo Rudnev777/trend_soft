@@ -6,9 +6,8 @@
 @use "globals" as *;
 
 @use "blocks/header" as *;
-@use "blocks/corner-points" as *;
+@use "blocks/block-points" as *;
 @use "blocks/translator-button" as *;
-@use "blocks/square-points" as *;
 @use "blocks/title-section" as *;
 @use "blocks/achievements-section" as *;
 @use "blocks/container" as *;
@@ -18,4 +17,5 @@
 @use "blocks/question" as *;
 @use "blocks/contacts" as *;
 @use "blocks/custom-development" as *;
-@use "blocks/cards" as *
+@use "blocks/cards" as *;
+@use "blocks/button" as *;

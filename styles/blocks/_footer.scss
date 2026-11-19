@@ -19,7 +19,7 @@
     }
 
     &__info {
-        max-width: 1164px;
+        max-width: var(--container-width);
         width: 100vw;
         display: grid;
         grid-template-columns: 1fr 1fr;

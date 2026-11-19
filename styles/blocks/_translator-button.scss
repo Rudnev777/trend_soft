@@ -21,7 +21,7 @@
       height: 44px;
       border: none;
       border-radius: var(--border-radius);
-      @include fluid-text(14, 6);
+      @include fluid-text(16, 6);
       font-weight: 500;
 
       @include mobile {

@@ -1,0 +1,18 @@
+ @use "../media" as *;
+ .button {
+        padding: 9px 28px;
+        background-color: var(--color-red);
+        color: var(--color-light);
+        border: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include fluid-text(16, 6);
+
+        @include tablet {
+            padding: 7px 24px;
+        }
+
+        @include mobile {
+            padding: 5px 20px;
+        }
+    }

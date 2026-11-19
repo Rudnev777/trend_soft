@@ -1,0 +1,68 @@
+@use "../media" as *;
+
+.block-points {
+    width: 170px;
+    aspect-ratio: 1;
+
+    --point-size: 5px;
+    --point-color: var(--color-red); 
+
+    &_white {
+        --point-color: var(--color-light);
+    }
+
+    @include tablet {
+        width: 130px;
+        --point-size: 4px;
+    }
+
+    @include mobile {
+        width: 100px;
+        --point-size: 3px;
+    }
+
+    @include mobile-s {
+        width: 64px;
+        --point-size: 2px;
+    }
+}
+
+.corner-points {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+
+    &__horizontal,
+    &__vertical {
+        background-image: radial-gradient(circle,
+                var(--point-color) calc(var(--point-size) / 2),
+                transparent calc(var(--point-size) / 2 + 0.5px));
+        background-repeat: repeat;
+
+
+    }
+
+    &__horizontal {
+        grid-column: 1 / -1;
+        grid-row: 1 / 3;
+        background-size: calc(100% / 12) calc(100% / 2);
+    }
+
+    &__vertical {
+        grid-column: 1 / 3;
+        grid-row: 3 / -1;
+        background-size: calc(100% / 2) calc(100% / 10);
+    }
+
+}
+
+.square-points {
+
+    background-image: radial-gradient(circle,
+            var(--point-color) calc(var(--point-size) / 2),
+            transparent calc(var(--point-size) / 2 + 0.5px));
+    background-size: calc(100% / 12) calc(100% /12);
+    background-repeat: repeat;
+
+}
